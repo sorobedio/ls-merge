@@ -6,9 +6,11 @@
     <img src="https://img.shields.io/badge/OpenReview-blue?style=flat-square" alt="OpenReview"/>
   </a>
   <a href="https://realsilviazhang.github.io/ls_merge/">
-    <img src="https://img.shields.io/badge/Blog-green?style=flat-square" alt="Blog"/>
+    <img src="https://img.shields.io/badge/Blog-grey?style=flat-square" alt="Blog"/>
   </a>
-  <img src="https://img.shields.io/badge/Categories-6-orange?style=flat-square" alt="Categories"/>
+  <a href="https://arxiv.org/abs/Paper_ARXIV_ID">
+    <img src="https://img.shields.io/badge/arXiv-orange?style=flat-square" alt="arXiv"/>
+  </a>
 </p>
 
 
