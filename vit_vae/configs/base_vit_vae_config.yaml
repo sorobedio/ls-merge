@@ -1,0 +1,43 @@
+model:
+  base_learning_rate: 4.5e-6
+  target: vit_vae.models.autoencoder.AutoencoderKL
+  params:
+#    learning_rate: 1e
+#    ckpt_path: 'tiny_autocheckpoints/best_model_vit_tiny_64_v2.pt'
+    embed_dim: 768 #128 #64
+    input_key: 'weight'
+#    kl_weight: 0.0001
+    flat_dim: 640
+    latent_token: 16
+    freeze_encoder: False
+    freeze_decoder: False
+    neck_only: False
+    use_log_transform: True
+    use_vae: True
+    learning_rate: 1.0e-4
+    mean_pooling: null #null, "proj", "mean", "tok", "attn", "depth", "linear"
+    # Latent prior (only used when use_vae: True)
+    prior_type: gaussian   # "gaussian" (closed-form KL) or "student_t" (heavy-tailed, MC KL)
+    student_t_df: 3.0      # degrees of freedom for student_t; lower = heavier tails, df→∞ ≈ gaussian
+    enconfig:
+      length: 10240
+      n_layers: 4 #12
+      chunk_size: 640
+      embed_dim: 768 #1024
+      latent_dim: 640
+      n_heads: 4
+      rope_base: 10000
+      #      dtype: torch.float32
+      conv: False
+      flatten: True
+    deconfig:
+      length: 10240
+      n_layers: 4
+      chunk_size: 640
+      embed_dim:  768
+      latent_dim: 640
+      n_heads: 4
+      rope_base: 10000
+      #      dtype: torch.float32
+      conv: False
+      flatten: True
