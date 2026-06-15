@@ -12,6 +12,7 @@
     <img src="https://img.shields.io/badge/arXiv-orange?style=flat-square" alt="arXiv"/>
   </a>
 </p>
+ CUDA_VISIBLE_DEVICES=0 torchrun --standalone --nnodes=1 --nproc_per_node=4 train_tf_vae.py
 
 
 
